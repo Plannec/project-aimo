@@ -36,7 +36,8 @@ public class Movement : MonoBehaviour {
 
         /* MOVEMENT */
         float move = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);
+        if (Input.GetKey(KeyCode.LeftShift)) rb.velocity = new Vector2(move * maxSpeed*1.8f, rb.velocity.y);
+        else rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);
     }
 
     // Collision enter event
