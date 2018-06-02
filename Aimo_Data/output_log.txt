@@ -1,12 +1,4 @@
-Mono path[0] = 'C:/Users/Public/Documents/Unity Projects/project-aimo/Aimo_Data/Managed'
-Mono path[1] = 'C:/Users/Public/Documents/Unity Projects/project-aimo/Aimo_Data/Mono'
-Mono config path = 'C:/Users/Public/Documents/Unity Projects/project-aimo/Aimo_Data/Mono/etc'
-PlayerConnection initialized from C:/Users/Public/Documents/Unity Projects/project-aimo/Aimo_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55423
-Multi-casting "[IP] 192.168.2.136 [Port] 55423 [Flags] 2 [Guid] 3391407491 [EditorId] 2715350596 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-U0JDBF4) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55423]
-PlayerConnection already initialized - listening to [0.0.0.0:55423]
-Player data archive not found at `C:/Users/Public/Documents/Unity Projects/project-aimo/Aimo_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.3p2 (b3d7a6428558)
+Initialize engine version: 5.6.3p2 (b3d7a6428558)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -23,9 +15,45 @@ Platform assembly: C:\Users\Public\Documents\Unity Projects\project-aimo\Aimo_Da
 Loading C:\Users\Public\Documents\Unity Projects\project-aimo\Aimo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Public\Documents\Unity Projects\project-aimo\Aimo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Public\Documents\Unity Projects\project-aimo\Aimo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.021 seconds
+- Completed reload, in  0.022 seconds
 Platform assembly: C:\Users\Public\Documents\Unity Projects\project-aimo\Aimo_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Public\Documents\Unity Projects\project-aimo\Aimo_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 3600x1080 at -1680,0
 <RI> Initializing input.
 <RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3600x1080 at -1680,0
+<RI> Initialized touch support.
+UnloadTime: 0.889518 ms
+5.03
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Plannec_Splashscreen.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.809718 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 269.
+Total: 1.700184 ms (FindLiveObjects: 0.018362 ms CreateObjectMapping: 0.007021 ms MarkObjects: 0.140691 ms  DeleteObjects: 1.533568 ms)
+
+Collided with Ground
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Collided with Ground
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Collided with Ground
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Collided with Ground
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: b6c -> priority: 1 
+  Thread -> id: 28c4 -> priority: 1 

@@ -36,14 +36,26 @@ public class Movement : MonoBehaviour {
 
         /* MOVEMENT */
         float move = Input.GetAxis("Horizontal");
-        if (Input.GetKey(KeyCode.LeftShift)) rb.velocity = new Vector2(move * maxSpeed*1.8f, rb.velocity.y);
+        float move_vert = Input.GetAxis("Vertical");
+
+        // Move forward/backward
+        if (Input.GetKey(KeyCode.LeftShift)) rb.velocity = new Vector2(move * maxSpeed * 1.8f, rb.velocity.y);
         else rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);
+        // Look up/down
+        if (move_vert > 0) animator.SetBool("Up", true);
+        else if (move_vert < 0) animator.SetBool("Down", true);
+        else
+        {
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+        }
     }
 
     // Collision enter event
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        Debug.Log("Collided with " + collision.gameObject.tag);
+        if (collision.gameObject.tag == "Ground")
         {
             grounded = true;
         }
