@@ -90,3 +90,31 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground005/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="Ground006" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 30 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground006"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground006/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ground007" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 30, 30 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground007"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground007/StaticBody2D"]
+shape = SubResource( 1 )
+

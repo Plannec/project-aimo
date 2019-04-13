@@ -11,10 +11,13 @@ func _physics_process(delta):
 	# Left & Right
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = SPEED
+		$AnimatedSprite.play("run")
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x = -SPEED
+		$AnimatedSprite.play("run")
 	else:
 		velocity.x = 0
+		$AnimatedSprite.play("idle")
 		
 	# Jump
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
