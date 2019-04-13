@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/Tilemap.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[node name="GroundTileset" type="Node2D"]
+
+[node name="Ground000" type="Sprite" parent="."]
+editor/display_folded = true
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground000"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground000/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ground001" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 30, 0 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground001"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground001/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ground002" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 90, 0 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground002"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground002/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ground003" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 60, 0 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground003"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground003/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ground004" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 60, 30 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground004"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground004/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ground005" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 90, 30 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground005"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground005/StaticBody2D"]
+shape = SubResource( 1 )
+
