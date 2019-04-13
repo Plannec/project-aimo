@@ -28,7 +28,7 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "run",
-"speed": 6.0
+"speed": 10.0
 } ]
 
 [node name="Player" type="KinematicBody2D"]
@@ -50,6 +50,5 @@ shape = SubResource( 2 )
 position = Vector2( -1.21067, 0.601201 )
 frames = SubResource( 3 )
 animation = "run"
-frame = 4
 playing = true
 
