@@ -15,8 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Training"
+config/name="Project-Aimo"
 run/main_scene="res://StageOne.tscn"
+boot_splash/bg_color=Color( 0.105882, 0.0509804, 0.192157, 1 )
 config/icon="res://icon.png"
 
 [display]
@@ -60,4 +61,5 @@ ui_down={
 
 quality/2d/use_pixel_snap=true
 threads/thread_model=2
+environment/default_clear_color=Color( 0.121569, 0.054902, 0.156863, 1 )
 environment/default_environment="res://default_env.tres"
