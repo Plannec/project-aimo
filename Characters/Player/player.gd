@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # Constains for movement
 const SPEED = 60
-const RUN_MULTIPLIER = 1.4
+const RUN_MULTIPLIER = 2
 const GRAVITY = 10
 const JUMP_POWER = -180
 const FLOOR = Vector2(0, -1)
@@ -29,7 +29,7 @@ func _physics_process(delta):
 		else:
 			camera.set_zoom(Vector2(1, 1))
 			
-		if RUN and is_on_floor():
+		if RUN:
 			velocity.x = SPEED*RUN_MULTIPLIER
 		else:
 			velocity.x = SPEED
@@ -44,7 +44,7 @@ func _physics_process(delta):
 		else:
 			camera.set_zoom(Vector2(1, 1))
 			
-		if RUN and is_on_floor():
+		if RUN:
 			velocity.x = -SPEED*RUN_MULTIPLIER
 		else:
 			velocity.x = -SPEED

@@ -33,7 +33,6 @@ visible = false
 position = Vector2( 137.873, 100.263 )
 scale = Vector2( 2.6832, 2.6832 )
 frames = SubResource( 1 )
-frame = 2
 playing = true
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 6 )]
