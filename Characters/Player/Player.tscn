@@ -1,0 +1,95 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Characters/Player/player.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Player/Bit/Idle_01.png" type="Texture" id=2]
+[ext_resource path="res://Characters/Player/Bit/Idle_02.png" type="Texture" id=3]
+[ext_resource path="res://Characters/Player/Bit/Idle_03.png" type="Texture" id=4]
+[ext_resource path="res://Characters/Player/Bit/Idle_04.png" type="Texture" id=5]
+[ext_resource path="res://Characters/Player/Bit/Jump_01.png" type="Texture" id=6]
+[ext_resource path="res://Characters/Player/Bit/Run_01.png" type="Texture" id=7]
+[ext_resource path="res://Characters/Player/Bit/Run_02.png" type="Texture" id=8]
+[ext_resource path="res://Characters/Player/Bit/Run_03.png" type="Texture" id=9]
+[ext_resource path="res://Characters/Player/Bit/Run_04.png" type="Texture" id=10]
+[ext_resource path="res://Characters/Player/Bit/Run_05.png" type="Texture" id=11]
+[ext_resource path="res://Characters/Player/Bit/Run_06.png" type="Texture" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.02207, 20.0819 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 3.35085, 2.96276 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "jump",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+} ]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Position2D
+
+onready var parent = $'..'	# Gets player
+
+func _ready():
+	update_pivot_angle()
+	pass
+	
+func _physics_process(delta):
+	update_pivot_angle()
+	
+func update_pivot_angle():
+	rotation_degrees = parent.look_direction.angle()"
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 0.377872, -0.566811 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.4488, 0.511602 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 2.36599, -16.4454 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1.21067, 0.601201 )
+frames = SubResource( 3 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="Pivot" type="Position2D" parent="."]
+modulate = Color( 0.65098, 0.329412, 0.329412, 1 )
+script = SubResource( 4 )
+
+[node name="CameraOffset" type="Position2D" parent="Pivot"]
+modulate = Color( 0.615686, 0.0784314, 0.784314, 1 )
+position = Vector2( 50.62, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="Pivot/CameraOffset"]
+current = true
+zoom = Vector2( 1.05, 1.05 )
+smoothing_enabled = true
+smoothing_speed = 2.0
+drag_margin_left = 0.38
+drag_margin_top = 0.0
+drag_margin_right = 0.19
+drag_margin_bottom = 0.0
+editor_draw_drag_margin = true
+
