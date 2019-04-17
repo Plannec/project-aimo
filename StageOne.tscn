@@ -5,7 +5,7 @@
 [ext_resource path="res://Backgrounds/Aimos Room.png" type="Texture" id=3]
 [ext_resource path="res://Backgrounds/Aimos Room_02.png" type="Texture" id=4]
 [ext_resource path="res://Backgrounds/Aimos Room_03.png" type="Texture" id=5]
-[ext_resource path="res://Characters/Kek/Kek.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/InteractionTest/InteractTest.tscn" type="PackedScene" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -33,20 +33,18 @@ visible = false
 position = Vector2( 137.873, 100.263 )
 scale = Vector2( 2.6832, 2.6832 )
 frames = SubResource( 1 )
+frame = 2
 playing = true
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( 663.318, 157.33 )
+[node name="InteractTest" parent="." instance=ExtResource( 6 )]
+position = Vector2( 507.898, 176.286 )
 
-[node name="TextEdit" type="TextEdit" parent="."]
-anchor_right = 1.0
-anchor_bottom = 0.33
-margin_left = 14.0
-margin_top = 181.0
-margin_right = 235.0
-margin_bottom = 242.0
-rect_scale = Vector2( 0.5, 0.5 )
+[node name="Label" type="Label" parent="."]
+margin_left = 15.8223
+margin_top = 186.397
+margin_right = 219.822
+margin_bottom = 217.397
 text = "Aimo and Bit: The Acquaintance
 Prototype"
-readonly = true
+align = 1
 
