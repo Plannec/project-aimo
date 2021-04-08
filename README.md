@@ -2,10 +2,10 @@
 Welcome to 'project-aimo', our little game.
 
 ## What is this?
-This game should be a open-source game with sweet graphics and nice gameplay. Currently there's nothing, but we're working on new assets and gameplay content.
+This game should be a open-source game with sweet graphics and nice gameplay. Currently there's nothing, but we're working on new assets and gameplay content *(if there would be motivation)*.
 
 ## Story
-*Currently in progress.* Will be available when finished.
+*Currently on ice.* It's just a plain prototype, not more not less.
 
 ## When can I play the game?
 Nobody knows how long this takes. Maybe never, maybe in 2 years.
